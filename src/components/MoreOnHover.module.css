@@ -1,0 +1,46 @@
+.RegularJSX {
+  position: relative;
+  display: inline;
+  background-color: rgb(216, 233, 249);
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .RegularJSX {
+    background-color: rgb(66, 83, 95);
+    border-color: var(--body-background);
+  }
+}
+
+.RegularJSX:hover .JsxOnHover {
+  display: block;
+}
+
+.JsxOnHover {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  top: 0;
+
+  width: 50vw;
+  transform: translateX(25%);
+
+  background-color: var(--item-card-background);
+  border: 1px solid #ccccccbd;
+  border-radius: 10px;
+  gap: 10px;
+
+  padding: 20px;
+
+  animation: glide 0.5s ease;
+}
+
+@keyframes glide {
+  0% {
+    transform: translateY(10px) translateX(25%);
+  }
+}

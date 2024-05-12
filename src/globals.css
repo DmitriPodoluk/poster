@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Labrada:ital,wght@0,100..900;1,100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  /* -------------------- PADDING LEVELS --------------------- */
+  --large-box-padding-desktop: 25px;
+  --large-box-padding-mobile: 15px;
+
+  /* --------------- UNIVERSAL COMPONENTS -------------------- */
+
+  --error-color-dark-mode: yellow;
+  --error-color-light-mode: red;
+
+  --item-card-background-dark-mode: rgb(61, 61, 61);
+  --item-card-background-light-mode: rgb(255, 255, 255);
+
+  --secondary-action-background-dark-mode: rgb(125, 125, 125);
+  --secondary-action-background-light-mode: rgb(190, 190, 190);
+
+  --navigation-action-foreground-dark-mode: rgb(85, 85, 85);
+  --navigation-action-foreground-light-mode: rgb(194, 194, 194);
+
+  /* ------------------------ BODY -------------------------- */
+  --body-background-dark-mode: rgb(38, 38, 38);
+  --body-background-light-mode: rgb(245, 245, 245);
+
+  --body-foreground-dark-mode: white;
+  --body-foreground-light-mode: black;
+
+  --body-default-font: "Roboto", sans-serif;
+
+  --body-font-size-desktop: 19px;
+  --body-font-size-mobile: 17px;
+
+  --icon-font-size-desktop: 29px;
+  --icon-font-size-mobile: 17px;
+
+  /* ------------------------ TOP BAR ------------------------ */
+  --topbar-background-dark-mode: rgba(0, 0, 0, 0.75);
+  --topbar-background-light-mode: rgba(255, 255, 255, 0.603);
+
+  /*THIS IS NOT IN USE*/
+  --topbar-background-contrasting-dark-mode: rgba(255, 255, 255, 0.603);
+  --topbar-background-contrasting-light-mode: rgba(0, 0, 0, 0.75);
+
+  --topbar-foreground-dark-mode: rgba(255, 255, 255, 0.65);
+  --topbar-foreground-light-mode: rgba(0, 0, 0, 0.65);
+
+  --topbar-foreground-active-dark-mode: rgba(255, 255, 255, 0.9);
+  --topbar-foreground-active-light-mode: rgba(0, 0, 0, 0.9);
+
+  --topbar-foreground-gentle-dark-mode: rgba(255, 255, 255, 0.35);
+  --topbar-foreground-gentle-light-mode: rgba(0, 0, 0, 0.35);
+
+  --topbar-foreground-contrasting-dark-mode: rgba(255, 255, 255, 0.603);
+  --topbar-foreground-contrasting-light-mode: rgba(0, 0, 0, 0.75);
+
+  --topbar-height: 0px; /*this is set later to a value that equals to the logo-height*/
+
+  --topbar-backdrop-filter: blur(15px);
+
+  /* ----------------------- LOGO AREA ----------------------- */
+  --logo-area-width-desktop: fit-content;
+  --logo-area-width-mobile: 100%;
+
+  /* ------------------------- LOGO -------------------------- */
+  /* Logo Size (responsive) */
+  --logo-width-desktop: 325px;
+  --logo-height-desktop: 70px;
+  --logo-top-margin-desktop: 0px;
+
+  --logo-width-mobile: 200px;
+  --logo-height-mobile: 50px;
+  --logo-top-margin-mobile: 10px;
+
+  /* Logo Fonts (responsive) */
+  --logo-title-font-family: "Anton", "impact";
+  --logo-title-font-size-desktop: 36px;
+  --logo-title-font-size-mobile: 24px;
+
+  --logo-sub-title-font-family: "Josefin Sans";
+  --logo-sub-title-font-size-desktop: 12px;
+  --logo-sub-title-font-size-mobile: 9px;
+  --logo-sub-title-font-weight-desktop: 500;
+  --logo-sub-title-font-weight-mobile: 400;
+
+  /* Theme (light/dark mode) */
+  --logo-background-dark-mode: rgba(255, 255, 255, 0.82);
+  --logo-background-light-mode: rgba(0, 0, 0, 0.9);
+
+  --logo-foreground-dark-mode: rgba(0, 0, 0, 1);
+  --logo-foreground-light-mode: rgba(255, 255, 255, 1);
+
+  /* --------------- TOP BAR ADDITIONAL CONTENT --------------- */
+  --topbar-additional-content-display-dekstop: inline-flex;
+  --topbar-additional-content-display-mobile: none;
+
+  /* ------------------- STORE SETTINGS  ---------------------- */
+
+  --store-filter-width: 0; /* THIS IS TO BE SET LATER*/
+  --store-filter-width-mobile: 100%; /*THIS IS TO BE SET LATER*/
+
+  --store-filter-background: none; /* THIS IS SET LATER */
+
+  /* ---------------------- CATEGORIES ----------------------- */
+  --categories-label-width-desktop: 125px;
+  --categories-label-width-mobile: 100px; /* THIS IS NOT ACTUALLY USED, IT'S HIDEN WHEN IN MOBILE*/
+
+  --categories-dropdown-category-height-desktop: 50px;
+  --categories-dropdown-category-height-mobile: 35px;
+
+  --categories-drop-down-gap-desktop: 0px; /* THIS IS NOT REALLY BEING USED RN */
+  --categories-drop-down-gap-mobile: 0; /* THIS IS NOT REALLY BEING USED RN */
+
+  --categories-dropdown-min-height-desktop: 450px;
+  --categories-dropdown-min-height-mobile: 100%; /* THIS IS NOT CURRENLT USED */
+
+  /* --------------------- SUB-CATEGORIES -------------------- */
+
+  --sub-categories-gap-desktop: 45px;
+  --sub-categories-gap-mobile: 0; /* THIS IS NOT CURRENTLY USED*/
+
+  --sub-categpry-font-size-desktop: 21px;
+  --sub-categpry-font-size-mobile: 19px;
+
+  /* --------------------- SEARCH AREA ----------------------- */
+  --search-bar-width-desktop: clamp(300px, 55vw, 900px);
+  --search-bar-width-mobile: 100%;
+
+  /* -------------------- CONTENT AREA ---------------------- */
+  --content-area-width-desktop: clamp(600px, 95%, 1400px);
+  --content-area-width-mobile: 98%;
+
+  --content-area-gap-desktop: 25px;
+  --content-area-gap-mobile: 5px;
+
+  --content-area-top-margin-desktop: 25px;
+  --content-area-top-margin-mobile: 5px;
+
+  /* -------------------- EXPLORE CARDS ---------------------- */
+
+  --content-card-border-radius-desktop: 15px;
+  --content-card-border-radius-mobile: 5px;
+
+  /* --------------------------------------------------------- */
+  /* MEDIA QUERIES */
+  @media (prefers-color-scheme: light) {
+    --error-color: var(--error-color-light-mode);
+
+    --item-card-background: var(--item-card-background-light-mode);
+    --secondary-action-background: var(
+      --secondary-action-background-light-mode
+    );
+
+    --navigation-action: var(--navigation-action-foreground-light-mode);
+
+    --body-background: var(--body-background-light-mode);
+    --body-foreground: var(--body-foreground-light-mode);
+
+    --topbar-background: var(--topbar-background-light-mode);
+    --topbar-foreground: var(--topbar-foreground-light-mode);
+
+    --topbar-background-contrasting: var(
+      --topbar-background-contrasting-light-mode
+    );
+
+    --topbar-foreground-active: var(--topbar-foreground-active-light-mode);
+    --topbar-foreground-gentle: var(--topbar-foreground-gentle-light-mode);
+
+    --logo-mode-background: var(--logo-background-light-mode);
+    --logo-mode-foreground: var(--logo-foreground-light-mode);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --error-color: var(--error-color-dark-mode);
+
+    --item-card-background: var(--item-card-background-dark-mode);
+    --secondary-action-background: var(--secondary-action-background-dark-mode);
+
+    --navigation-action: var(--navigation-action-foreground-dark-mode);
+
+    --body-background: var(--body-background-dark-mode);
+    --body-foreground: var(--body-foreground-dark-mode);
+
+    --topbar-background: var(--topbar-background-dark-mode);
+    --topbar-foreground: var(--topbar-foreground-dark-mode);
+
+    --topbar-background-contrasting: var(
+      --topbar-background-contrasting-dark-mode
+    );
+
+    --topbar-foreground-active: var(--topbar-foreground-active-dark-mode);
+    --topbar-foreground-gentle: var(--topbar-foreground-gentle-dark-mode);
+
+    --logo-mode-background: var(--logo-background-dark-mode);
+    --logo-mode-foreground: var(--logo-foreground-dark-mode);
+  }
+
+  --store-filter-background: var(
+    --topbar-background-contrasting
+  ); /* It's diffrent because it uses a diffrent style instead of creating one */
+
+  /*RESPONSIVE DESIGN DISABLED*/
+
+  @media (max-width: 800px) {
+    /* MOBILE */
+    --large-box-padding: var(--large-box-padding-mobile);
+    --body-font-size: var(--body-font-size-mobile);
+    --icon-font-size: var(--icon-font-size-mobile);
+
+    --topbar-height: var(--logo-height-mobile);
+
+    --logo-area-width: var(--logo-area-width-mobile);
+
+    --logo-title-font-size: var(--logo-title-font-size-mobile);
+    --logo-sub-title-font-size: var(--logo-sub-title-font-size-mobile);
+    --logo-sub-title-font-weight: var(--logo-sub-title-font-weight-mobile);
+
+    --logo-width: var(--logo-width-mobile);
+    --logo-height: var(--logo-height-mobile);
+    --logo-top-margin: var(--logo-top-margin-mobile);
+
+    --store-filter-width: var(--store-filter-width-mobile);
+
+    --categories-label-width: var(--categories-label-width-mobile);
+    --categories-dropdown-min-height: var(
+      --categories-dropdown-min-height-mobile
+    );
+
+    --categories-dropdown-category-height: var(
+      --categories-dropdown-category-height-mobile
+    );
+
+    --sub-categories-gap: var(--sub-categories-gap-mobile);
+    --sub-categpry-font-size: var(--sub-categpry-font-size-mobile);
+
+    --search-bar-width: var(--search-bar-width-mobile);
+
+    --topbar-additional-content-display: var(
+      --topbar-additional-content-display-mobile
+    );
+
+    --categories-drop-down-gap: var(--categories-drop-down-gap-mobile);
+
+    --content-area-width: var(--content-area-width-mobile);
+    --content-area-gap: var(--content-area-gap-mobile);
+    --content-area-top-margin: var(--content-area-top-margin-mobile);
+
+    --content-card-border-radius: var(--content-card-border-radius-mobile);
+  }
+  @media (min-width: 801px) {
+    /* DESKTOP */
+    --large-box-padding: var(--large-box-padding-desktop);
+    --body-font-size: var(--body-font-size-desktop);
+    --icon-font-size: var(--icon-font-size-desktop);
+
+    --topbar-height: var(--logo-height-desktop);
+
+    --logo-area-width: var(--logo-area-width-desktop);
+
+    --logo-title-font-size: var(--logo-title-font-size-desktop);
+    --logo-sub-title-font-size: var(--logo-sub-title-font-size-desktop);
+    --logo-sub-title-font-weight: var(--logo-sub-title-font-weight-desktop);
+
+    --logo-width: var(--logo-width-desktop);
+    --logo-height: var(--logo-height-desktop);
+    --logo-top-margin: var(--logo-top-margin-desktop);
+
+    --store-filter-width: var(--logo-width);
+
+    --categories-label-width: var(--categories-label-width-desktop);
+    --categories-dropdown-min-height: var(
+      --categories-dropdown-min-height-desktop
+    );
+
+    --sub-categories-gap: var(--sub-categories-gap-desktop);
+    --sub-categpry-font-size: var(--sub-categpry-font-size-desktop);
+
+    --search-bar-width: var(--search-bar-width-desktop);
+
+    --topbar-additional-content-display: var(
+      --topbar-additional-content-display-dekstop
+    );
+
+    --categories-dropdown-category-height: var(
+      --categories-dropdown-category-height-desktop
+    );
+
+    --categories-drop-down-gap: var(--categories-drop-down-gap-desktop);
+
+    --content-area-width: var(--content-area-width-desktop);
+    --content-area-gap: var(--content-area-gap-desktop);
+    --content-area-top-margin: var(--content-area-top-margin-desktop);
+    --content-card-border-radius: var(--content-card-border-radius-desktop);
+  }
+}
+
+body {
+  z-index: -1;
+
+  margin: 0;
+  user-select: none;
+
+  background-color: var(--body-background);
+  color: var(--body-foreground);
+  font-family: var(--body-default-font);
+  font-size: var(--body-font-size);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.material-icon {
+  font-family: "Material Symbols Outlined";
+  font-display: block;
+  font-size: var(--icon-font-size);
+}
+
+.ContentArea {
+  margin-inline: auto;
+  width: var(--content-area-width);
+  margin-top: var(--content-area-top-margin);
+}
+
+.Screen_Centered_card {
+  z-index: -1;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--item-card-background);
+  border: 1px solid #ccccccbd;
+  border-radius: 18px;
+
+  gap: 10px;
+
+  /*animation: rotate-on-page-load 0.75s ease;*/
+}
+
+.Screen_Centered_card {
+  z-index: -1;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+
+  background-color: var(--item-card-background);
+  border: 1px solid #ccccccbd;
+  border-radius: 18px;
+
+  gap: 10px;
+
+  /*animation: rotate-on-page-load 0.75s ease;*/
+}
+
+.default_centered_card_padding {
+  padding: 25px;
+}

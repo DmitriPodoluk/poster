@@ -1,0 +1,61 @@
+/* Topbar contrainer classes */
+.TopbarWrapper {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  background-color: var(--topbar-background);
+  color: var(--topbar-foreground);
+
+  backdrop-filter: var(--topbar-backdrop-filter);
+}
+
+.TopbarContent {
+  vertical-align: top; /* keeps the flexbox from vondering of */
+
+  display: var(--topbar-additional-content-display);
+
+  align-items: center;
+
+  height: var(--logo-height);
+}
+
+/* LOGO RELATED CLASSES */
+.LogoArea {
+  vertical-align: top; /* keeps the flexbox from vondering of */
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--logo-area-width);
+}
+
+.LogoWrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--logo-width);
+  height: var(--logo-height);
+  margin-top: var(--logo-top-margin);
+
+  background-color: var(--logo-mode-background);
+  color: var(--logo-mode-foreground);
+}
+
+.LogoTitleText {
+  margin: 0;
+
+  font-family: var(--logo-title-font-family);
+  font-size: var(--logo-title-font-size);
+}
+
+.LogoSubTitleText {
+  margin: 0;
+
+  font-family: var(--logo-sub-title-font-family);
+  font-size: var(--logo-sub-title-font-size);
+  font-weight: var(--logo-sub-title-font-weight);
+}
