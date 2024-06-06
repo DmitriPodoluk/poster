@@ -4,15 +4,22 @@ import ComponentStyles from "./MoreOnHover.module.css";
 function MoreOnHover({ usual_jsx, jsx_on_hover }) {
   const [showOnHoverData, setShowOnHoverData] = useState(false);
 
-  const MouseOverStart = () => {
-    setShowOnHoverData(true);
-  };
+  const on_hover_elements = showOnHoverData ? (
+    <div className={ComponentStyles.JsxOnHover}>
+      <h3>{usual_jsx}</h3>
+      {jsx_on_hover}
+    </div>
+  ) : undefined;
 
   return (
     <>
-      <div className={ComponentStyles.RegularJSX} onMouseEnter={MouseOverStart}>
+      <div
+        className={ComponentStyles.RegularJSX}
+        onMouseEnter={() => setShowOnHoverData(true)}
+        onMouseLeave={() => setShowOnHoverData(false)}
+      >
         {usual_jsx}
-        <div className={ComponentStyles.JsxOnHover}>{jsx_on_hover}</div>
+        {on_hover_elements}
       </div>
     </>
   );

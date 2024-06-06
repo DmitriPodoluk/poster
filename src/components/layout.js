@@ -17,6 +17,7 @@ function Topbar() {
         <img
           src={require("../assets/SapLogoCut.png")}
           style={{ height: "var(--topbar-height)" }}
+          className={LayoutStyles.logo}
         />
       </div>
       <div className={LayoutStyles.TopbarContent}></div>

@@ -59,3 +59,7 @@
   font-size: var(--logo-sub-title-font-size);
   font-weight: var(--logo-sub-title-font-weight);
 }
+
+.logo {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255));
+}
